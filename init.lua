@@ -200,6 +200,12 @@ local config = {
                                         },
                                 },
                         },
+                        bashls = {
+                                cmd_env = {
+                                        GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)",
+                                        SHELLCHECK_PATH = "/opt/homebrew/bin/shellcheck",
+                                }
+                        }
                 },
                 -- example for addings schemas to yamlls
                 -- yamlls = { -- override table for require("lspconfig").yamlls.setup({...})
@@ -263,6 +269,7 @@ local config = {
                         --     require("lsp_signature").setup()
                         --   end,
                         -- },
+                        { "ThePrimeagen/vim-be-good" },
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
                 ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
