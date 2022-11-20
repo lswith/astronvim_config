@@ -287,11 +287,49 @@ local config = {
                         return config -- return final config table
                 end,
                 treesitter = { -- overrides `require("treesitter").setup(...)`
-                        -- ensure_installed = { "lua" },
+                        ensure_installed = {
+                                "bash",
+                                "lua",
+                                "c",
+                                "go",
+                                "rust",
+                                "hcl",
+                                "python",
+                                "rust",
+                                "typescript",
+                                "javascript",
+                                "c_sharp",
+                                "ruby",
+                                "elixir",
+                                "dockerfile",
+                                "gitignore",
+                                "json",
+                                "markdown",
+                                "regex",
+                                "sql",
+                                "toml",
+                                "proto",
+                                "yaml",
+                        },
                 },
                 -- use mason-lspconfig to configure LSP installations
                 ["mason-lspconfig"] = { -- overrides `require("mason-lspconfig").setup(...)`
-                        -- ensure_installed = { "sumneko_lua" },
+                        ensure_installed = {
+                                "sumneko_lua",
+                                "bashls",
+                                "terraformls",
+                                "gopls",
+                                "pyright",
+                                "rust_analyzer",
+                                "tflint",
+                                "dockerls",
+                                "jsonls",
+                                "sqls",
+                                "terraformls",
+                                "tsserver",
+                                "yamlls",
+
+                        },
                 },
                 -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
                 ["mason-null-ls"] = { -- overrides `require("mason-null-ls").setup(...)`
