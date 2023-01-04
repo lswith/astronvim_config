@@ -318,7 +318,6 @@ local config = {
 			ensure_installed = {
 				"sumneko_lua",
 				"bashls",
-				"terraformls",
 				"gopls",
 				"pyright",
 				"rust_analyzer",
@@ -326,7 +325,6 @@ local config = {
 				"dockerls",
 				"jsonls",
 				"sqls",
-				"terraformls",
 				"tsserver",
 				"yamlls",
 			},
@@ -386,17 +384,17 @@ local config = {
 	-- anything that doesn't fit in the normal config locations above can go here
 	polish = function()
 		-- Set up custom filetypes
-		-- vim.filetype.add {
-		--   extension = {
-		--     foo = "fooscript",
-		--   },
-		--   filename = {
-		--     ["Foofile"] = "fooscript",
-		--   },
-		--   pattern = {
-		--     ["~/%.config/foo/.*"] = "fooscript",
-		--   },
-		-- }
+		vim.filetype.add({
+			extension = {
+				tf = "hcl",
+			},
+			--   filename = {
+			--     ["Foofile"] = "fooscript",
+			--   },
+			--   pattern = {
+			--     ["~/%.config/foo/.*"] = "fooscript",
+			--   },
+		})
 	end,
 }
 
