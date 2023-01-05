@@ -295,6 +295,7 @@ local config = {
 				"go",
 				"rust",
 				"hcl",
+				"terraform",
 				"python",
 				"rust",
 				"typescript",
@@ -322,6 +323,7 @@ local config = {
 				"pyright",
 				"rust_analyzer",
 				"tflint",
+				"terraformls",
 				"dockerls",
 				"jsonls",
 				"sqls",
@@ -384,17 +386,17 @@ local config = {
 	-- anything that doesn't fit in the normal config locations above can go here
 	polish = function()
 		-- Set up custom filetypes
-		vim.filetype.add({
-			extension = {
-				tf = "hcl",
-			},
-			--   filename = {
-			--     ["Foofile"] = "fooscript",
-			--   },
-			--   pattern = {
-			--     ["~/%.config/foo/.*"] = "fooscript",
-			--   },
-		})
+		-- vim.filetype.add({
+		-- extension = {
+		-- tf = "terraform",
+		-- },
+		--   filename = {
+		--     ["Foofile"] = "fooscript",
+		--   },
+		--   pattern = {
+		--     ["~/%.config/foo/.*"] = "fooscript",
+		--   },
+		-- })
 	end,
 }
 
